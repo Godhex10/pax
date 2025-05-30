@@ -356,6 +356,67 @@
             font-size: 1.2rem;
             border-radius: 0 10px 10px 0;
         }
+        /* Framework Section */
+#framework {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+#framework h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2b2b2b;
+  font-weight: 700;
+  border-bottom: 2px solid #cccccc45;
+  padding-bottom: 0.5rem;
+}
+
+/* Grid Layout */
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Cards */
+.framework-card {
+  background: #ffffff;
+  border-left: 5px solid #007b7f;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.framework-card:hover {
+  transform: translateY(-5px);
+}
+
+.framework-card h3 {
+  font-size: 1.3rem;
+  color: #13304e;
+  margin-bottom: 1rem;
+}
+
+.framework-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.framework-card ul li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.framework-card ul li strong {
+  color: #13304e;
+  font-weight: 600;
+}
 
         /* Mission and Vision */
         .mission-vision {
@@ -771,8 +832,7 @@
                         </p>
                         
                     </div>
-                </div>
-                
+                </div>           
                 <center><div class="highlight-quote">
                     "We believe leadership must Do No Harm—and instead must heal."
                 </div></center>
@@ -780,54 +840,43 @@
         </div>
     </section>
 
+    <!-- Framework Section -->
+    <section id="framework">
+  <h2>Pax Empathica Leadership Integrity Framework</h2>
+  <div class="framework-grid">
+    
+    <div class="framework-card">
+      <h3>Core Principles</h3>
+      <ul>
+        <li><strong>Ethical Governance</strong> – Leadership defined by integrity and accountability</li>
+        <li><strong>Historical Reckoning</strong> – Leaders must confront past injustices</li>
+        <li><strong>Empathy as Policy</strong> – Dignity-centered governance</li>
+      </ul>
+    </div>
 
-      <section id="framework">
-    <h2>Pax Empathica Leadership Integrity Framework</h2>
-    <h3>Core Principles</h3>
-    <ul>
-      <li><strong>Ethical Governance</strong> – Leadership defined by integrity and accountability</li>
-      <li><strong>Historical Reckoning</strong> – Leaders must confront past injustices</li>
-      <li><strong>Empathy as Policy</strong> – Dignity-centered governance</li>
-    </ul>
-    <h3>Assessment Models</h3>
-    <ul>
-      <li><strong>PE-LII:</strong> Power ethics, transparency, impact</li>
-      <li><strong>EDSEI:</strong> Empathy in policy, relational justice</li>
-    </ul>
-    <h3>Leadership Archetypes</h3>
-    <ul>
-      <li><strong>Guardian:</strong> Order-driven, traditional</li>
-      <li><strong>Technician:</strong> Efficient but emotionally distant</li>
-      <li><strong>Strategist:</strong> Visionary, power consolidator</li>
-      <li><strong>Challenger:</strong> System reformer</li>
-      <li><strong>Bridge Builder:</strong> Empathy-centered healer</li>
-    </ul>
-  </section>
+    <div class="framework-card">
+      <h3>Assessment Models</h3>
+      <ul>
+        <li><strong>PE-LII:</strong> Power ethics, transparency, impact</li>
+        <li><strong>EDSEI:</strong> Empathy in policy, relational justice</li>
+      </ul>
+    </div>
+
+    <div class="framework-card">
+      <h3>Leadership Archetypes</h3>
+      <ul>
+        <li><strong>Guardian:</strong> Order-driven, traditional</li>
+        <li><strong>Technician:</strong> Efficient but emotionally distant</li>
+        <li><strong>Strategist:</strong> Visionary, power consolidator</li>
+        <li><strong>Challenger:</strong> System reformer</li>
+        <li><strong>Bridge Builder:</strong> Empathy-centered healer</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
     <!-- Mission and Vision -->
-    <!-- <section class="mission-vision">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Our Mission & Vision</h2>
-            <div class="mission-vision-grid">
-                <div class="mission-card">
-                    <h3>Our Mission</h3>
-                    <p>To humanize leadership and governance by centring empathy, lived experience, and ethical integrity—transforming how power is measured, experienced, and held accountable across the world.</p>
-                </div>
-                <div class="mission-card">
-                    <h3>Our Mission</h3>
-                    <p>To humanize leadership and governance by centring empathy, lived experience, and ethical integrity—transforming how power is measured, experienced, and held accountable across the world.</p>
-                </div>
-                <div class="mission-card">
-                    <h3>Our Mission</h3>
-                    <p>To humanize leadership and governance by centring empathy, lived experience, and ethical integrity—transforming how power is measured, experienced, and held accountable across the world.</p>
-                </div>
-                <div class="vision-card">
-                    <h3>Our Vision</h3>
-                    <p>A post-imperial world where empathy is embedded at the heart of global peace governance and leadership culture.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- Problem Section -->
     <section class="problem-section">
         <div class="container">
@@ -875,23 +924,7 @@
             </p>
         </div>
     </section>
-
-    <!-- Future Section -->
-    <!-- <section class="future-section">
-        <div class="container">
-            <div class="future-content">
-                <h2 class="section-title" style="color: white;">The Future of Peace is Measurable</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-                    "This isn't a feel-good campaign. It's a structural revolution. 
-                    Pax Empathica empowers governments, global agencies, 
-                    and civil society to track and transform empathy in real time."
-                </p>
-                <a href="#contact" class="cta-button">Join the Movement</a>
-            </div>
-        </div>
-    </section> -->
-
-     <section id="case-studies" style="padding: 4rem 2rem; max-width: 1100px; margin: auto;">
+    <section id="case-studies" style="padding: 4rem 2rem; max-width: 1100px; margin: auto;">
     <center><h2>Case Studies: Leadership, Gender & Empathy</h2></center>
     <h3 style="margin-top: 80px;">First Ladies: Global Cross-Section</h3>
     <table>
