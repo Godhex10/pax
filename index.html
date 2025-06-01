@@ -223,7 +223,7 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3.1rem;
+            gap: 2.9rem;
             margin-top: 4rem;
             position: relative;
             margin-left: 20px;
@@ -580,6 +580,251 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
         }
+
+                .footer {
+            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.02);
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #e2e8f0;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-section ul li a:hover {
+            color: #60a5fa;
+            transform: translateX(5px);
+        }
+
+        .company-info {
+            grid-column: 1;
+        }
+
+        .company-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-squares {
+            display: flex;
+            gap: 3px;
+            margin-right: 15px;
+        }
+
+        .logo-square {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #60a5fa, #3b82f6);
+            border-radius: 3px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .logo-square:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .logo-square:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .company-description {
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-size: 15px;
+            max-width: 280px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link.linkedin {
+            background: linear-gradient(135deg, #0077b5, #005885);
+        }
+
+        .social-link.twitter {
+            background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .social-link:hover::before {
+            left: 100%;
+        }
+
+        .social-icon {
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .activate-windows {
+            color: #64748b;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 30px;
+            }
+            
+            .company-info {
+                grid-column: 1 / -1;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 40px 0 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .company-description {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .footer-section h3 {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .footer-section ul li a {
+                font-size: 14px;
+            }
+            
+            .social-link {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .social-icon {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -796,7 +1041,62 @@
             </div>
         </div>
     </section> -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section company-info">
+                    <div class="company-logo">
+                        <b>Pax Empathica</b>
+                    </div>
+                    <p class="company-description">
+                        From Empire to Empathy. From Domination to Dignity.
+                        Reimagining Peace, Leadership, and Justice for a Fractured World.
+                    </p>
+                </div>
 
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#news">News and Events</a></li>
+                        <li><a href="#sustainability">Sustainability</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#sectors">Sectors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#corporate-info">Corporate Information</a></li>
+                        <li><a href="#governance">Corporate Governance</a></li>
+                        <li><a href="#csr">Corporate Social Responsibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2025 Pax Empathica All rights reserved.
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                        <span class="social-icon">in</span>
+                    </a>
+                    <a href="#" class="social-link twitter" aria-label="Twitter">
+                        <span class="social-icon">𝕏</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
         // Mobile menu toggle
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
