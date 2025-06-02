@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Approach - Pax Empathica</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.html"> <!-- Reuse main styles -->
+  <style>
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.6;
+      color: #333;
+      padding-top: 120px;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    h3 {
+      font-size: 1.8rem;
+      color: #13304e;
+      margin-top: 2rem;
+    }
+    p, li {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.8;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .highlight {
+      background: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1rem;
+      font-style: italic;
+      margin: 2rem 0;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-top: 4rem;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.8rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: relative;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle:hover {
+            color: #3498db;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .logo::after {
+            content: "Pax Empathica";
+            margin-right: 0.5rem;
+            font-family: sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #13304e;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .nav-links > .nav-item > a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links > .nav-item > a:hover::after {
+            width: 100%;
+        }
+
+        .dropdown-icon {
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item:hover .dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            min-width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 0;
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            border-bottom: none;
+            white-space: nowrap;
+        }
+
+        .dropdown a::after {
+            display: none !important;
+        }
+
+        .dropdown a:hover {
+            background: rgba(52, 152, 219, 0.1);
+            color: #3498db;
+            padding-left: 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url(./assets/images/slide-1.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-style: italic;
+            color: #ffffffcf;
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 6rem 2rem;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3.1rem;
+            margin-top: 4rem;
+            position: relative;
+            margin-left: 20px;
+        }
+        .features-grids {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.1rem;
+            margin-top: 4rem;
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 304px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-cards {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 390px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .feature-cards:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #13304e;
+            font-weight: 600;
+        }
+
+        .feature-titles {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #13304e;
+            font-weight: 600;
+        }
+
+        .feature-description {
+            color: #666666cc;
+            line-height: 1.7;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .content-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .content-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-quote {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Mission and Vision */
+        .mission-vision {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card, .vision-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mission-card h3, .vision-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: #ecf0f1;
+            padding: 6rem 2rem;
+        }
+
+        .problem-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .problem-card h4 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        /* Future Section */
+        .future-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f39c12" width="1200" height="600"/><g opacity="0.3"><path d="M0,400 Q300,200 600,400 T1200,400 V600 H0 Z" fill="%23e67e22"/></g></svg>');
+            background-size: cover;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .future-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* .fade-in {
+            animation: fadeInUp 0.8s ease;
+        } */
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                border-radius: 0 0 15px 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            .feature-cards {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 278px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 304px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-left: -15px;
+        }
+
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-links a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                justify-content: space-between;
+            }
+
+            .nav-links > .nav-item > a::after {
+                display: none;
+            }
+
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(0, 0, 0, 0.05);
+                border-radius: 0;
+                border: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0;
+            }
+
+            .nav-item.dropdown-open .dropdown {
+                max-height: 300px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown a {
+                padding: 0.8rem 3rem;
+                background: none;
+            }
+
+            .dropdown a:hover {
+                background: rgba(52, 152, 219, 0.1);
+                padding-left: 3.5rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu-toggle {
+                display: none;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Button styles */
+        .cta-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="./assets/images/logo.png" width="50px" height="50px" alt="" srcset="">
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item">
+                    <a href="#about" class="dropdown-toggle">About Us <span class="dropdown-icon">▼</span></a>
+                    <div class="dropdown">
+                        <a href="#about">Our Story</a>
+                        <a href="#team">Our Team</a>
+                        <a href="#values">Our Values</a>
+                        <a href="#impact">Our Impact</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#approach" class="dropdown-toggle">Our Approach <span class="dropdown-icon">▼</span></a>
+                    <div class="dropdown">
+                        <a href="#methodology">Methodology</a>
+                        <a href="#framework">Framework</a>
+                        <a href="#research">Research</a>
+                        <a href="#case-studies">Case Studies</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="dropdown-toggle">Projects <span class="dropdown-icon">▼</span></a>
+                    <div class="dropdown">
+                        <a href="#current-projects">Current Projects</a>
+                        <a href="#past-projects">Past Projects</a>
+                        <a href="#partnerships">Partnerships</a>
+                        <a href="#global-initiatives">Global Initiatives</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="./donate.html" class="dropdown-toggle">Donate</a>
+                    <div class="dropdown">
+                        <a href="#services">Services</a>
+                        <a href="#training">Training Programs</a>
+                        <a href="#workshops">Workshops</a>
+                        <a href="#advisory">Advisory Services</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="dropdown-toggle">Contact Us <span class="dropdown-icon">▼</span></a>
+                    <div class="dropdown">
+                        <a href="#contact-form">Get In Touch</a>
+                        <a href="#offices">Our Offices</a>
+                        <a href="#careers">Careers</a>
+                        <a href="#media">Media Inquiries</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- Methodology -->
+  <section id="methodology">
+    <h2>Methodology: How We Build Pax Empathica</h2>
+    <p>Pax Empathica is grounded in the belief that peace is not merely the absence of conflict but the presence of empathy, justice, and ethical relationships. Our approach combines academic rigor, lived experience, and interdisciplinary insight to develop a new paradigm of peace for a fractured world.</p>
+    <h3>1. Interdisciplinary Framework</h3>
+    <ul>
+      <li><strong>Classics:</strong> Study of historical empires like Rome for governance and power structures.</li>
+      <li><strong>Peace Studies:</strong> Use of peacebuilding models and conflict transformation.</li>
+      <li><strong>Sociology, Ethics, Theology:</strong> Integration of moral thought, justice narratives, and cultural ethics.</li>
+    </ul>
+    <h3>2. Comparative Historical Analysis</h3>
+    <p>We examine systems like Pax Romana, Pax Britannica, and Pax Americana versus grassroots postcolonial peace efforts. We ask: What were the costs? Who was silenced? What visions of peace were suppressed?</p>
+    <h3>3. Decolonial & Intersectional Lenses</h3>
+    <p>We uplift Global South, women, Indigenous, and marginalized voices to expose structural injustice in modern peacebuilding.</p>
+    <h3>4. Narrative Inquiry</h3>
+    <p>We treat stories as "data of dignity"—revealing ethical dimensions often missed by policy or statistics.</p>
+    <h3>5. Qualitative & Reflective Research</h3>
+    <ul>
+      <li>Thematic content analysis</li>
+      <li>Critical reflections on peacebuilding failures</li>
+      <li>Ethical engagement with affected communities</li>
+    </ul>
+    <h3>6. Knowledge Translation</h3>
+    <p>We convert insights into public scholarship: policy briefs, podcasts, visual explainers, and educational tools.</p>
+    <h3>7. Collaborative Praxis</h3>
+    <p>We co-create with scholars, artists, and peacebuilders globally. Pax Empathica is a collective, evolving vision.</p>
+  </section>
+
+  <!-- Framework -->
+  <section id="framework">
+    <h2>Pax Empathica Leadership Integrity Framework</h2>
+    <h3>Core Principles</h3>
+    <ul>
+      <li><strong>Ethical Governance</strong> – Leadership defined by integrity and accountability</li>
+      <li><strong>Historical Reckoning</strong> – Leaders must confront past injustices</li>
+      <li><strong>Empathy as Policy</strong> – Dignity-centered governance</li>
+    </ul>
+    <h3>Assessment Models</h3>
+    <ul>
+      <li><strong>PE-LII:</strong> Power ethics, transparency, impact</li>
+      <li><strong>EDSEI:</strong> Empathy in policy, relational justice</li>
+    </ul>
+    <h3>Leadership Archetypes</h3>
+    <ul>
+      <li><strong>Guardian:</strong> Order-driven, traditional</li>
+      <li><strong>Technician:</strong> Efficient but emotionally distant</li>
+      <li><strong>Strategist:</strong> Visionary, power consolidator</li>
+      <li><strong>Challenger:</strong> System reformer</li>
+      <li><strong>Bridge Builder:</strong> Empathy-centered healer</li>
+    </ul>
+  </section>
+
+  <!-- Research -->
+  <section id="research">
+    <h2>Core Research Areas</h2>
+    <h3>Leadership Archetype Analysis</h3>
+    <p>We use PE-LII and EDSEI to analyze leaders in political and civic spaces based on ethics, empathy, and impact.</p>
+    <h3>Governance Ethics & Accountability</h3>
+    <p>Exploring how leadership ethics shape corruption, power centralization, and reform globally.</p>
+    <h3>Empathy in Policy Implementation</h3>
+    <p>How leadership empathy shapes inclusive policy, healing, and justice outcomes.</p>
+    <h3>Historical Reckoning</h3>
+    <p>We examine how leadership responses to past injustice shape reconciliation and national identity.</p>
+    <h3>Public Perception & Trust</h3>
+    <p>Through discourse and survey data, we analyze citizen trust and leadership legitimacy.</p>
+    <div class="highlight">In an age of distrust, we believe leadership must heal, not harm.</div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies">
+    <h2>Case Studies: Leadership, Gender & Empathy</h2>
+    <h3>First Ladies: Global Cross-Section</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Archetype</th>
+          <th>Focus Area</th>
+          <th>PE-LII Insights</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Michelle Obama</td><td>USA</td><td>Bridge Builder</td><td>Health, Education</td><td>Transformational empathy</td></tr>
+        <tr><td>Hillary Clinton</td><td>USA</td><td>Strategist/Challenger</td><td>Healthcare, Women’s Rights</td><td>Polarizing, morally assertive</td></tr>
+        <tr><td>Grace Mugabe</td><td>Zimbabwe</td><td>Strategist</td><td>Economic interests</td><td>Controversial, power-focused</td></tr>
+        <tr><td>Queen Noor</td><td>Jordan</td><td>Bridge Builder</td><td>Peacebuilding</td><td>Moderate, global integrity</td></tr>
+      </tbody>
+    </table>
+    <h3>Presidents: Moral Complexity</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Archetype</th>
+          <th>Legacy Impact</th>
+          <th>PE-LII Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Nelson Mandela</td><td>South Africa</td><td>Challenger/Bridge Builder</td><td>Unity, justice</td><td>Exemplary moral leadership</td></tr>
+        <tr><td>Barack Obama</td><td>USA</td><td>Bridge Builder</td><td>Diplomacy, equity</td><td>Empathy-driven reform</td></tr>
+        <tr><td>Adolf Hitler</td><td>Germany</td><td>Strategist (Tyrannical)</td><td>Genocide, totalitarianism</td><td>Ethically void</td></tr>
+        <tr><td>Kwame Nkrumah</td><td>Ghana</td><td>Challenger/Strategist</td><td>Decolonization</td><td>Visionary but complex</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight">
+      Our case studies show how ethics, empathy, and legacy intersect in real-world leadership.
+    </div>
+  </section>
+
+</body>
+</html>

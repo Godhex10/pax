@@ -166,6 +166,131 @@
             padding-left: 2rem;
         }
 
+
+        .container {
+  margin: 0 auto;
+  max-width: 910px;
+}
+
+.choose {
+  width: 100%;
+  height: 40px;
+}
+.fa {
+  margin-right: 20px;
+  font-size: 30px;
+  color: gray;
+  float: right;
+}
+/******************************************
+Book stuff
+*******************************************/
+
+.book {
+  display: inline-block;
+  width: 230px;
+  height: 390px;
+  box-shadow: 0 0 20px #aaa;
+  margin: 25px;
+  padding: 10px 10px 0 10px;
+  vertical-align: top;
+  transition: height 1s;
+}
+/* star button */
+/* .book:after {
+  font-family: FontAwesome;
+  content: "\f006";
+  font-size: 35px;
+  position: relative;
+  left: -.1cm;
+  top: -1.6cm;
+  float: right;
+} */
+
+.cover {
+  border: 2px solid gray;
+  height: 80%;
+  overflow: hidden;
+}
+
+.cover img {
+  width: 100%;
+}
+
+.book p {
+  margin-top: 12px;
+  font-size: 11px;
+}
+
+.book .author {
+  font-size: 15px;
+}
+@media (max-width: 941px) {
+  .container {
+    max-width: 700px;
+  }
+  .book {
+    margin: 49px;
+  }
+}
+@media (max-width: 730px) {
+  .book {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .cover {
+    
+  }
+}
+
+/*********************************
+other
+**********************************/
+
+h1 {
+  color: gray;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: -3px;
+}
+
+/**********************************
+display change
+***********************************/
+/*book height smaller, cover opacity, move text onto cover and star too
+animate it */
+#list-th:target .book {
+  height: 100px;
+  width: 250px;
+  padding: 10px;
+  margin: 25px auto 25px auto;
+}
+
+#list-th:target .cover {
+  width: 246px;
+}
+
+#list-th:target img {
+  opacity: .1;
+}
+
+#list-th:target p {
+  margin-top: -62px;
+  margin-left: 20px;
+}
+/* remove button? */
+#large-th:target .book {
+  height: 390px;
+}
+
+/***********************************
+star animation
+***********************************/
+/***********************************
+zoom on click
+***********************************/
+
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -581,7 +706,7 @@
             box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
         }
 
-                .footer {
+        .footer {
             background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
             color: white;
             padding: 60px 0 30px;
@@ -848,10 +973,10 @@
                 <li class="nav-item">
                     <a href="./approach.html" class="dropdown-toggle">Our Approach <span class="dropdown-icon">▼</span></a>
                     <div class="dropdown">
-                        <a href="#methodology">Methodology</a>
-                        <a href="#framework">Framework</a>
-                        <a href="#research">Research</a>
-                        <a href="#case-studies">Case Studies</a>
+                        <a href="./approach.html#methodology">Methodology</a>
+                        <a href="./approach.html#framework">Framework</a>
+                        <a href="./approach.html#core">Research</a>
+                        <a href="./approach.html#case-studies">Case Studies</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -865,22 +990,20 @@
                 </li>
                 <li class="nav-item">
                     <a href="./donate.html" class="dropdown-toggle">Donate</a>
-                    <!-- <div class="dropdown">
+                    <div class="dropdown">
                         <a href="#services">Services</a>
                         <a href="#training">Training Programs</a>
                         <a href="#workshops">Workshops</a>
                         <a href="#advisory">Advisory Services</a>
-                    </div> -->
+                    </div>
                 </li>
                  <li class="nav-item">
                     <a href="./publications.html" class="dropdown-toggle">Publications <span class="dropdown-icon">▼</span></a>
                     <div class="dropdown">
-                         <div class="dropdown">
                         <a href="./publications.html">Books</a>
                         <a href="./publications.html">Article</a>
                         <a href="./publications.html">White Paper</a>
                         <a href="./publications.html">NewsLetter</a>
-                    </div>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -896,162 +1019,81 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-subtitle">Pax Empathica</div>
-            <h1 class="hero-title">Reimagining Peace Beyond Empire</h1>
-            <p class="hero-description">From Empire to Empathy. From Domination to Dignity.<br>
-            Reimagining Peace, Leadership, and Justice for a Fractured World.</p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="approach">
-        <div class="container">
-            <!-- <h2 class="section-title">Our Approach</h2> -->
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon"><img src="./assets/images/questions.png" width="70px" height="70px" alt="" srcset=""></span>
-                    <h3 class="feature-title">Why Pax Empathica</h3>
-                    <p class="feature-description">From Pax Romana and Pax Americana to a new paradigm that promotes shared dignity and restorative justice.</p>
+    <section class="books">
+        <div id="large-th">
+            <div class="container">
+                <h1> A list of books</h1>
+                <br>
+                <div class="choose">
+                    <a href="#list-th"><i class="fa fa-th-list" aria-hidden="true"></i></a>
+                    <a href="#large-th"><i class="fa fa-th-large" aria-hidden="true"></i></a>
                 </div>
-                <div class="feature-card">
-                    <span class="feature-icon"><img src="./assets/images/empathy.png" width="70px" height="70px" alt="" srcset=""></span>
-                    <h3 class="feature-title">Empathy in Action</h3>
-                    <p class="feature-description">Empathy is centred not as a marginal tool but as a fundamental principle of governance.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon"><img src="./assets/images/world-peace.png" width="70px" height="70px" alt="" srcset=""></span>
-                    <h3 class="feature-title">More than a Toolkit</h3>
-                    <p class="feature-description">Pax Empathica is not a programme, but a new grammar of peace, a fresh worldview</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon"><img src="./assets/images/heal.png" width="70px" height="70px" alt="" srcset=""></span>
-                    <h3 class="feature-title">Rooted in Repair</h3>
-                    <p class="feature-description">History, gender, trauma healing, decolonial peace and social renewal</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="main-content" id="about">
-        <div class="container">
-            <div class="content-section">
-                <div class="content-grid">
-                    <div>
-                        <p class="content-text">
-                            Pax Empathica is a global research institute for policy, 
-                            leadership and governance, transforming how we develop ethical leaders, 
-                            architect good governance, build positive peace and engineer social justice — 
-                            how we choose, evaluate, and hold leaders accountable—based on empathy, memory and 
-                            inclusion. 
-                        </p>
-                        <p class="content-text">
-                           Based on the logic of Empire, today’s world is overrun by charismatic strongmen, 
-                           ethically bankrupt elites, and corrupt governance systems that prioritize domination 
-                           over ethical leadership, human dignity and social healing. From the private to the 
-                           public sector, from electoral politics to post-war reconstruction, the world is in 
-                           dire need of peacebuilding leadership rooted in ethical integrity, historical 
-                           accountability, and relational repair.
-                        </p>
+                <div id="list-th">
+                    <div class="book read">
+                        <div class="cover">
+                            <img src="./assets/images/book1.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="title">The Nigerian People & their Presidents<br>
+                                <span class="author">Lekan Olayiwola</span>
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <p class="content-text">
-                            PaxEm Global fills that need. We provide a constructive, measurable alternative for 
-                            the future of leadership—especially in fragile states, postcolonial societies, and 
-                            transitional democracies. We demonstrate that in peace-making efforts, Empathy is 
-                            not merely a soft skill or moral disposition, but a measurable, strategic leadership 
-                            principle predictive of leadership effectiveness in decolonial peace and social justice.
-                        </p>
+                    <div class="book read">
+                        <div class="cover">
+                            <img src="./assets/images/book2.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="title">Hidden In Plain Sight<br>
+                                <span class="author">Lekan Olayiwola</span>
+                            </p>
+                        </div>
                     </div>
-                     <div>
-                        <p class="content-text">
-                            PaxEm Global fills that need. We provide a constructive, measurable alternative for 
-                            the future of leadership—especially in fragile states, postcolonial societies, and 
-                            transitional democracies. We demonstrate that in peace-making efforts, Empathy is 
-                            not merely a soft skill or moral disposition, but a measurable, strategic leadership 
-                            principle predictive of leadership effectiveness in decolonial peace and social justice.
-                        </p>
+                    <div class="book unread">
+                        <div class="cover">
+                            <img src="./assets/images/book3.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="title">From Ceaser To Christ</br>
+                                <span class="author">Lekan Olayiwola</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="book unread">
+                        <div class="cover">
+                            <img src="./assets/images/book4.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="title">Under The Shadows of Power</br>
+                               <span class="author">Lekan Olayiwola</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="book read">
+                        <div class="cover">
+                            <img src="./assets/images/book5.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="title">From Empire To Empathy</br>
+                                <span class="author">Lekan Olayiwola</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="book read">
+                        <div class="cover">
+                            <img src="./assets/images/book6.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="title">Things They Never Teach you in Classical Studies and Peace and Conflict Studies</br>
+                                <span class="author">Paulo Coelho</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
-                
-                <center><div class="highlight-quote">
-                    "We believe leadership must Do No Harm—and instead must heal."
-                </div></center>
             </div>
         </div>
     </section>
 
-    <!-- Mission and Vision -->
-    <section class="mission-vision">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Our Mission & Vision</h2>
-            <div class="mission-vision-grid">
-                <div class="mission-card">
-                    <h3>Our Mission</h3>
-                    <p>To humanize leadership and governance by centring empathy, lived experience, and ethical integrity—transforming how power is measured, experienced, and held accountable across the world.</p>
-                </div>
-                <div class="vision-card">
-                    <h3>Our Vision</h3>
-                    <p>A post-imperial world where empathy is embedded at the heart of global peace governance and leadership culture.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="container">
-            <h2 class="section-title">The Problem We're Solving</h2>
-            <p style="text-align: center; font-size: 1.5rem; margin-bottom: -2rem; color: #666;">
-                Too many leaders are selected for
-            </p>
-            <!-- <div class="problem-cards">
-                <div class="problem-card">
-                    <h4>• Charisma over character</h4>
-                    <h4>• Control over collaboration</h4>
-                    <h4>• Silence over systemic repair</h4>
-                </div>
-            </div> -->
-            <div class="features-grids">
-                <div class="feature-cards">
-                    <!-- <span class="feature-icon">🤝</span> -->
-                    <h3 class="feature-titles">Charisma Over character</h3>
-                    <p class="feature-description">Charisma over character critiques prioritizing charm and popularity over integrity, empathy, and ethical leadership in governance.</p>
-                </div>
-                <div class="feature-cards">
-                    <!-- <span class="feature-icon">💭</span> -->
-                    <h3 class="feature-titles">Control over collaboration</h3>
-                    <p class="feature-description">Control over collaboration critiques leadership that values dominance and authority over empathy, inclusion, and cooperative decision-making processes</p>
-                </div>
-                <div class="feature-cards">
-                    <!-- <span class="feature-icon">⚖️</span> -->
-                    <h3 class="feature-titles">Silence over systemic repair</h3>
-                    <p class="feature-description">Silence over systemic repair critiques the tendency to ignore deep-rooted injustices instead of addressing and healing societal wounds.</p>
-                </div>
-            </div>
-            <p style="text-align: center; font-size: 2.1rem; margin-top: 2rem; color: #666; font-style: italic;">
-                This leads distrust, corruption, inequality, and conflict.
-            </p>
-        </div>
-    </section>
-
-    <!-- Future Section -->
-    <!-- <section class="future-section">
-        <div class="container">
-            <div class="future-content">
-                <h2 class="section-title" style="color: white;">The Future of Peace is Measurable</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-                    "This isn't a feel-good campaign. It's a structural revolution. 
-                    Pax Empathica empowers governments, global agencies, 
-                    and civil society to track and transform empathy in real time."
-                </p>
-                <a href="#contact" class="cta-button">Join the Movement</a>
-            </div>
-        </div>
-    </section> -->
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
