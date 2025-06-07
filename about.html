@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pax Empathica - Reimagining Peace Beyond Empire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        ol, ul {
+            padding-left: 0rem;
         }
 
         body {
@@ -54,7 +59,7 @@
             color: #3498db;
         }
 
-                .logo {
+               .logo {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -174,139 +179,10 @@
             padding-left: 2rem;
         }
 
-
-        .container {
-  margin: 0 auto;
-  max-width: 910px;
-}
-
-.choose {
-  width: 100%;
-  height: 40px;
-}
-.fa {
-  margin-right: 20px;
-  font-size: 30px;
-  color: gray;
-  float: right;
-}
-/******************************************
-Book stuff
-*******************************************/
-
-.book {
-  display: inline-block;
-  width: 230px;
-  /* height: 390px; */
-  box-shadow: 0 0 8px #aaa;
-  margin: 25px;
-  padding: 10px 10px 10px 10px;
-  vertical-align: top;
-  transition: height 1s;
-}
-/* star button */
-/* .book:after {
-  font-family: FontAwesome;
-  content: "\f006";
-  font-size: 35px;
-  position: relative;
-  left: -.1cm;
-  top: -1.6cm;
-  float: right;
-} */
-
-.cover {
-  /* border: 2px solid gray; */
-  height: 37%;
-  overflow: hidden;
-}
-
-.cover img {
-  width: 100%;
-}
-
-.book a {
-  margin-top: 12px;
-  font-size: 15px;
-  text-decoration: none;
-  color: #1e1e1e;
-}
-
-.book .author {
-  font-size: 13px;
-  position: relative;
-  top: 9px;
-}
-@media (max-width: 941px) {
-  .container {
-    max-width: 700px;
-  }
-  .book {
-    margin: 49px;
-  }
-}
-@media (max-width: 730px) {
-  .book {
-    display: block;
-    margin: 0 auto;
-    margin-top: 50px;
-  }
-  .cover {
-    
-  }
-}
-
-/*********************************
-other
-**********************************/
-
-h1 {
-  color: gray;
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: -3px;
-}
-
-/**********************************
-display change
-***********************************/
-/*book height smaller, cover opacity, move text onto cover and star too
-animate it */
-#list-th:target .book {
-  height: 100px;
-  width: 250px;
-  padding: 10px;
-  margin: 25px auto 25px auto;
-}
-
-#list-th:target .cover {
-  width: 246px;
-}
-
-#list-th:target img {
-  opacity: .1;
-}
-
-#list-th:target p {
-  margin-top: -62px;
-  margin-left: 20px;
-}
-/* remove button? */
-#large-th:target .book {
-  height: 390px;
-}
-
-/***********************************
-star animation
-***********************************/
-/***********************************
-zoom on click
-***********************************/
-
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: url(./assets/images/slide-1.jpg);
+            background: url(./assets/images/slide2.jpeg);
             background-size: cover;
             background-position: center;
             display: flex;
@@ -321,6 +197,7 @@ zoom on click
             max-width: 800px;
             padding: 2rem;
             animation: fadeInUp 1s ease;
+            color: #13304e
         }
 
         .hero-subtitle {
@@ -343,7 +220,7 @@ zoom on click
             margin-bottom: 2rem;
             opacity: 0.9;
             font-style: italic;
-            color: #ffffffcf;
+            color: #ff9802;
         }
 
         /* Features Grid */
@@ -360,7 +237,7 @@ zoom on click
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.9rem;
+            gap: 3.1rem;
             margin-top: 4rem;
             position: relative;
             margin-left: 20px;
@@ -368,7 +245,7 @@ zoom on click
         .features-grids {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.1rem;
+            gap: 4.1rem;
             margin-top: 4rem;
             position: relative;
             margin-left: 20px;
@@ -447,6 +324,13 @@ zoom on click
             color: #2c3e50;
             position: relative;
         }
+        .content-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            position: relative;
+            margin-top: 50px;
+        }
 
         .section-title::after {
             content: '';
@@ -485,6 +369,101 @@ zoom on click
             font-size: 1.2rem;
             border-radius: 0 10px 10px 0;
         }
+        /* Framework Section */
+        .core-values-section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.core-card {
+  background-color: #ffffff;
+  border-left: 5px solid #0077b6;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.value-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.value-list li {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.value-list strong {
+  color: #023e8a;
+}
+
+
+#framework {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+#framework h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2b2b2b;
+  font-weight: 700;
+  border-bottom: 2px solid #cccccc45;
+  padding-bottom: 0.5rem;
+}
+
+/* Grid Layout */
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Cards */
+.framework-card {
+  background: #ffffff;
+  border-left: 5px solid #007b7f;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.framework-card:hover {
+  transform: translateY(-5px);
+}
+
+.framework-card h3 {
+  font-size: 1.3rem;
+  color: #13304e;
+  margin-bottom: 1rem;
+}
+
+.framework-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.framework-card ul li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.framework-card ul li strong {
+  color: #13304e;
+  font-weight: 600;
+}
 
         /* Mission and Vision */
         .mission-vision {
@@ -553,173 +532,24 @@ zoom on click
             max-width: 800px;
             margin: 0 auto;
         }
+        table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.8rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* .fade-in {
-            animation: fadeInUp 0.8s ease;
-        } */
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: flex;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(15px);
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-                border-radius: 0 0 15px 15px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                border-top: 1px solid rgba(0, 0, 0, 0.1);
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-                z-index: 999;
-            }
-            .feature-cards {
-            background: white;
-            padding: 1rem;
-            border-radius: 15px;
-            text-align: center;
-            width: 278px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            padding-top: 1.2rem;
-            padding-bottom: 1.2rem;
-        }
-        .feature-card {
-            background: white;
-            padding: 1rem;
-            border-radius: 15px;
-            text-align: center;
-            width: 304px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-left: -15px;
-        }
-
-
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .nav-item {
-                width: 100%;
-            }
-
-            .nav-links a {
-                padding: 1rem 2rem;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-                justify-content: space-between;
-            }
-
-            .nav-links > .nav-item > a::after {
-                display: none;
-            }
-
-            .dropdown {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                background: rgba(0, 0, 0, 0.05);
-                border-radius: 0;
-                border: none;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-                padding: 0;
-            }
-
-            .nav-item.dropdown-open .dropdown {
-                max-height: 300px;
-                padding: 0.5rem 0;
-            }
-
-            .dropdown a {
-                padding: 0.8rem 3rem;
-                background: none;
-            }
-
-            .dropdown a:hover {
-                background: rgba(52, 152, 219, 0.1);
-                padding-left: 3.5rem;
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .content-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .mission-vision-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .nav-container {
-                padding: 1rem;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .mobile-menu-toggle {
-                display: none;
-            }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Button styles */
-        .cta-button {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-
-        .cta-button:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
-        }
-
-        .footer {
-            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+            .footer {
+            background: linear-gradient(135deg, #000309 0%, #12104a 100%);
             color: white;
             padding: 60px 0 30px;
             position: relative;
@@ -962,6 +792,170 @@ zoom on click
                 font-size: 18px;
             }
         }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* .fade-in {
+            animation: fadeInUp 0.8s ease;
+        } */
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                border-radius: 0 0 15px 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            .feature-cards {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 278px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 304px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-left: -15px;
+        }
+
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-links a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                justify-content: space-between;
+            }
+
+            .nav-links > .nav-item > a::after {
+                display: none;
+            }
+
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: rgba(0, 0, 0, 0.05);
+                border-radius: 0;
+                border: none;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                padding: 0;
+            }
+
+            .nav-item.dropdown-open .dropdown {
+                max-height: 300px;
+                padding: 0.5rem 0;
+            }
+
+            .dropdown a {
+                padding: 0.8rem 3rem;
+                background: none;
+            }
+
+            .dropdown a:hover {
+                background: rgba(52, 152, 219, 0.1);
+                padding-left: 3.5rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu-toggle {
+                display: none;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Button styles */
+        .cta-button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -1038,132 +1032,216 @@ zoom on click
             </ul>
         </nav>
     </header>
-    <section class="books">
-        <div id="large-th">
-            <div class="container">
-                <h1> A list of books</h1>
-                <br>
-                <div class="choose">
-                    <a href="#list-th"><i class="fa fa-th-list" aria-hidden="true"></i></a>
-                    <a href="#large-th"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">Pax Empathica</div>
+            <h1 class="hero-title">Our Approach</h1>
+            <p class="hero-description">
+                From Violence to Voice. From Silence to Solidarity.
+                Reclaiming Memory, Power, and Belonging in the Struggle for Just Peace.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="approach">
+        <div class="container">
+            <!-- <h2 class="section-title">Our Approach</h2> -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon"><img src="./assets/images/questions.png" width="70px" height="70px" alt="" srcset=""></span>
+                    <h3 class="feature-title">Why Pax Empathica</h3>
+                    <p class="feature-description">From Pax Romana and Pax Americana to a new paradigm that promotes shared dignity and restorative justice.</p>
                 </div>
-                <div id="list-th">
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/1.jpg" height="137px">
-                        </div>
-                        <div class="description">
-                            <a href="https://www.thecable.ng/toward-an-empathy-driven-security-architecture-in-tackling-insecurity-in-nigeria/" class="title">
-                                Toward an empathy-driven security architecture in tackling insecurity in Nigeria<br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/2.jpg">
-                        </div>
-                        <div class="description">
-                            <a href="https://www.thecable.ng/translating-tinubus-mid-term-governance-data-into-dignity-for-nigerians/" class="title">
-                                Translating Tinubu’s mid-term governance data into dignity for Nigerians<br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book unread">
-                        <div class="cover">
-                            <img src="./assets/images/3.jpg">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://thenationonlineng.net/trump-presidency-and-global-political-economy/#google_vignette">
-                                Trump presidency and global political economy</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book unread">
-                        <div class="cover">
-                            <img src="./assets/images/4.jpg">
-                        </div>
-                        <div class="description">
-                            <a href="https://thenationonlineng.net/trump-why-zelensky-has-no-better-path-to-a-peace-deal/" class="title">
-                                Trump: Why Zelensky has no better path to a peace deal</br>
-                               <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/5.jpg">
-                        </div>
-                        <div class="description">
-                            <a href="https://www.thecable.ng/natasha-akpotis-case-and-barriers-to-women-in-power-politics/" class="title">
-                                Natasha Akpoti’s case and barriers to women in power, politics</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/6.jpg">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://www.thecable.ng/surviving-pervasive-corruption-in-nigeria/">
-                                Surviving pervasive corruption in Nigeria</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/7.jpg">
-                        </div>
-                        <div class="description">
-                            <a href="https://thenationonlineng.net/how-soldiers-involvement-in-civilian-affairs-undermines-civil-military-relations/" class="title">
-                                How soldiers’ involvement in civilian affairs undermines civil-military relations</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/8.jpg">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://www.thecable.ng/something-is-wrong-with-how-faith-speaks-truth-to-power-in-nigeria/">
-                               Something is wrong with how faith speaks truth to power in Nigeria</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/9.png">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://www.thecable.ng/boyfriends-from-hell/">
-                                Boyfriends from hell</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/9.jpg">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://www.thecable.ng/the-missing-weapon-in-nigerias-war-on-terror/">
-                                The missing weapon in Nigeria’s war on terror</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><img src="./assets/images/empathy.png" width="70px" height="70px" alt="" srcset=""></span>
+                    <h3 class="feature-title">Empathy in Action</h3>
+                    <p class="feature-description">Empathy is centred not as a marginal tool but as a fundamental principle of governance.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><img src="./assets/images/world-peace.png" width="70px" height="70px" alt="" srcset=""></span>
+                    <h3 class="feature-title">More than a Toolkit</h3>
+                    <p class="feature-description">Pax Empathica is not a programme, but a new grammar of peace, a fresh worldview</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon"><img src="./assets/images/heal.png" width="70px" height="70px" alt="" srcset=""></span>
+                    <h3 class="feature-title">Rooted in Repair</h3>
+                    <p class="feature-description">History, gender, trauma healing, decolonial peace and social renewal</p>
                 </div>
             </div>
         </div>
     </section>
 
-   <footer class="footer" id="footer">
+    <!-- Main Content -->
+    <section class="main-content" id="about">
+        <div class="container">
+             <h2 class="section-title">About Us</h2>
+            <div class="content-section">
+                    <p>Pax Empathica is grounded in the belief that peace is not merely the absence of conflict 
+                        but the presence of empathy, justice, and ethical relationships. Our approach combines 
+                        academic rigor, lived experience, and interdisciplinary insight to develop a new paradigm
+                        of peace for a fractured world.In a world dominated by charismatic strongmen, ethically bankrupt elites, 
+                        and governance systems designed for control rather than care, PaxEm Global stands as a pioneering force for
+                        transformational change.
+                        In transiting a wounded world from the logic of Empire to one of Empathy, we challenge the status quo by delivering 
+                        structured, measurable tools that redefine leadership integrity, governance ethics, and societal repair. 
+                        Through our groundbreaking frameworks—PE-LII (Pax Empathica Leadership Integrity Index) and 
+                        EDSEI (Empathy Distribution & Social Experience Index)—we empower governments, institutions, and organizations 
+                        to vet leadership beyond power dynamics, ensuring ethical governance, historical accountability, and relational 
+                        justice.
+
+                    </p>
+                    <div class="impact" id="impact">
+                    <h2 class="section-title" style="margin-top: 150px;">Our Impact Story</h2>
+                    <div class="content-grid">
+                    <div>
+                        <h2 class="content-title" style="font-size: 22px;"><b>How a Single Op-Ed Prompted Military Accountability and Protected a Community</b></h2>
+                        <p class="content-text">
+                          In January, 2025, Pax Empathica published a searing op-ed titled *"How Soldiers’ 
+                          Involvement in Community Policing Undermines Civil-Military Relations". The article 
+                          documented harrowing reports of military abuse, extortion, and intimidation in a 
+                          residential community in Lagos, where soldiers—originally deployed to work on and 
+                          “secure” road construction—had devolved into unregulated enforcers, doing police work.
+                          The piece struck a nerve. Within 24 hours, the office of the General Officer Commanding 
+                          (GOC) of Nigeria’s 81 Division personally reached out to the author to request details 
+                          for investigation. In an official correspondence, a *Brigadier General acknowledged* 
+                          that the soldiers in question were part of the Nigerian Army Engineers and *assured 
+                          the public of internal redress and disciplinary review*. This was not a typical response.
+                          In Nigeria’s tense and opaque civil-military environment, such rapid engagement—sparked by 
+                          a citizen voice without institutional backing—is exceedingly rare. Weeks after the 
+                          intervention, the situation in the affected community *improved significantly. 
+                          Extortion stopped. The soldiers—still present—became more restrained. In a powerful 
+                          sign of behavioral shift, **when a soldier’s motorcycle was recently stolen, no 
+                          collective punishment or reprisal was taken against the community.* This marks a 
+                          profound break from the past, where such incidents often led to indiscriminate 
+                          retaliation, harassment, or mass arrests.
+                          This outcome demonstrates the core tenet of Pax Empathica: that *public truth-telling, 
+                          ethical courage, and empathetic advocacy can shift power and protect dignity*—even in 
+                          systems historically resistant to scrutiny. <br>
+                          We did not have a grant. <br>
+                          We did not hold a press conference. <br>
+                          We only had a story—and the courage to tell it.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="content-title" style="font-size: 22px;"><b>Shaping Public Discourse, One Article at a Time</b></h2>
+                        <p class="content-text">
+                           In an information-saturated era where many civic voices go unheard, PaxEmpathica’s 
+                           founder has quietly built a powerful platform—one op-ed at a time—published consistently
+                           in major Nigerian outlets such as The Cable and The Nation. Without institutional 
+                           sponsorship or paid amplification, each article garners between 400 and 1,300+ organic 
+                           readers, week after week. These are not casual clicks—they represent a growing audience 
+                           of engaged citizens, security officials, scholars, and policymakers tracking hard truths 
+                           about injustice, accountability, and peace in Nigeria’s urban margins.
+                           Beyond print and online publication, these articles receive further amplification 
+                           through The Cable’s and The Nation’s X (formerly Twitter) handles, where thousands 
+                           more engage with, share, and debate the content. This dynamic social media presence 
+                           helps extend reach beyond traditional readership, sparking important conversations in 
+                           real time across Nigeria’s vibrant digital public sphere.
+                           Through bold but grounded commentary—on issues ranging from military overreach to 
+                           community policing—this independent writer has built a trusted channel of public 
+                           insight and ethical critique. One op-ed published in The Cable prompted a direct 
+                           response from a Brigadier General in Lagos Division 81, leading to a formal military 
+                           inquiry, increased discipline, and a significant reduction in violence against 
+                           civilians in a volatile district. Weeks later, the situation improved so much that 
+                           when a soldier’s motorbike was stolen, the community experienced no reprisals—marking
+                           a rare moment of trust and stability.
+                           Sustained engagement with The Cable, The Nation, and their X platforms has positioned 
+                           this work as de facto public service journalism, directly influencing public discourse
+                           and government accountability.
+                           "We don't have institutional backing yet—but we have the attention of both the public 
+                           and the state. With the right support, we can deepen this civic reach into a 
+                           sustainable platform for peace journalism, ethical storytelling, and grassroots reform."
+                           This is public scholarship with impact. This is civic engagement at scale—on a 
+                           shoestring budget. Imagine the transformation possible with even modest catalytic 
+                           funding.
+                        </p>
+                    </div>
+                </div>
+                </div>
+                <center><div class="highlight-quote">
+                    "We believe leadership must Do No Harm—and instead must heal."
+                </div></center>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Section -->
+    <section class="core-values-section" id="core">
+    <h2 class="section-title">Core Values</h2>
+    <div class="core-card">
+      <ul class="value-list">
+        <li><strong>Empathy</strong> – As method, ethic, and practice</li>
+        <li><strong>Decolonization</strong> – Of knowledge, governance, and memory</li>
+        <li><strong>Justice</strong> – Historical, gendered, economic, and epistemic</li>
+        <li><strong>Relational Peace</strong> – Grounded in local knowledges and lived experiences</li>
+        <li><strong>Historical Repair</strong> – Acknowledging wounds, making space for healing</li>
+      </ul>
+    </div>
+  </section>
+
+    <!-- Mission and Vision -->
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <!-- <div class="problem-cards">
+                <div class="problem-card">
+                    <h4>• Charisma over character</h4>
+                    <h4>• Control over collaboration</h4>
+                    <h4>• Silence over systemic repair</h4>
+                </div>
+            </div> -->
+            <p style="text-align: center; font-size: 2.1rem; margin-top: 2rem; color: #666; font-style: italic;">
+                In an age of distrust, we believe leadership must heal, not harm.
+            </p>
+        </div>
+    </section>
+    <!-- <section id="case-studies" style="padding: 4rem 2rem; max-width: 1100px; margin: auto;">
+    <center><h2>Case Studies: Leadership, Gender & Empathy</h2></center>
+    <h3 style="margin-top: 80px;">First Ladies: Global Cross-Section</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Archetype</th>
+          <th>Focus Area</th>
+          <th>PE-LII Insights</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Michelle Obama</td><td>USA</td><td>Bridge Builder</td><td>Health, Education</td><td>Transformational empathy</td></tr>
+        <tr><td>Hillary Clinton</td><td>USA</td><td>Strategist/Challenger</td><td>Healthcare, Women’s Rights</td><td>Polarizing, morally assertive</td></tr>
+        <tr><td>Grace Mugabe</td><td>Zimbabwe</td><td>Strategist</td><td>Economic interests</td><td>Controversial, power-focused</td></tr>
+        <tr><td>Queen Noor</td><td>Jordan</td><td>Bridge Builder</td><td>Peacebuilding</td><td>Moderate, global integrity</td></tr>
+      </tbody>
+    </table>
+    <h3 style="margin-top: 80px;">Presidents: Moral Complexity</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Archetype</th>
+          <th>Legacy Impact</th>
+          <th>PE-LII Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Nelson Mandela</td><td>South Africa</td><td>Challenger/Bridge Builder</td><td>Unity, justice</td><td>Exemplary moral leadership</td></tr>
+        <tr><td>Barack Obama</td><td>USA</td><td>Bridge Builder</td><td>Diplomacy, equity</td><td>Empathy-driven reform</td></tr>
+        <tr><td>Adolf Hitler</td><td>Germany</td><td>Strategist (Tyrannical)</td><td>Genocide, totalitarianism</td><td>Ethically void</td></tr>
+        <tr><td>Kwame Nkrumah</td><td>Ghana</td><td>Challenger/Strategist</td><td>Decolonization</td><td>Visionary but complex</td></tr>
+      </tbody>
+    </table>
+    <center>
+        <div class="highlight-quote">
+            "Our case studies show how ethics, empathy, and legacy intersect in real-world leadership."
+        </div>
+    </center>
+    </section> -->
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section company-info">

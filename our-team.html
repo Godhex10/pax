@@ -76,6 +76,7 @@
             font-weight: normal;
         }
 
+
         .nav-links {
             display: flex;
             list-style: none;
@@ -191,52 +192,52 @@
   float: right;
 }
 /******************************************
-Book stuff
+team stuff
 *******************************************/
 
-.book {
-  display: inline-block;
-  width: 230px;
-  /* height: 390px; */
-  box-shadow: 0 0 8px #aaa;
-  margin: 25px;
-  padding: 10px 10px 10px 10px;
-  vertical-align: top;
-  transition: height 1s;
-}
-/* star button */
-/* .book:after {
-  font-family: FontAwesome;
-  content: "\f006";
-  font-size: 35px;
-  position: relative;
-  left: -.1cm;
-  top: -1.6cm;
-  float: right;
-} */
-
-.cover {
-  /* border: 2px solid gray; */
-  height: 37%;
-  overflow: hidden;
+.our-team {
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.cover img {
-  width: 100%;
+.our-team h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
-.book a {
-  margin-top: 12px;
-  font-size: 15px;
-  text-decoration: none;
-  color: #1e1e1e;
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.book .author {
-  font-size: 13px;
-  position: relative;
-  top: 9px;
+.team-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 20px;
 }
+
+.team-card img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.team-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
 @media (max-width: 941px) {
   .container {
     max-width: 700px;
@@ -719,7 +720,7 @@ zoom on click
         }
 
         .footer {
-            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+            background: linear-gradient(135deg, #000309 0%, #12104a 100%);
             color: white;
             padding: 60px 0 30px;
             position: relative;
@@ -962,6 +963,48 @@ zoom on click
                 font-size: 18px;
             }
         }
+
+        .founder-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.founder-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.founder-image {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.founder-image img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.founder-bio {
+    flex: 2 1 500px;
+}
+
+.founder-bio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.founder-bio p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
     </style>
 </head>
 <body>
@@ -1038,132 +1081,60 @@ zoom on click
             </ul>
         </nav>
     </header>
-    <section class="books">
-        <div id="large-th">
-            <div class="container">
-                <h1> A list of books</h1>
-                <br>
-                <div class="choose">
-                    <a href="#list-th"><i class="fa fa-th-list" aria-hidden="true"></i></a>
-                    <a href="#large-th"><i class="fa fa-th-large" aria-hidden="true"></i></a>
-                </div>
-                <div id="list-th">
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/1.jpg" height="137px">
-                        </div>
-                        <div class="description">
-                            <a href="https://www.thecable.ng/toward-an-empathy-driven-security-architecture-in-tackling-insecurity-in-nigeria/" class="title">
-                                Toward an empathy-driven security architecture in tackling insecurity in Nigeria<br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/2.jpg">
-                        </div>
-                        <div class="description">
-                            <a href="https://www.thecable.ng/translating-tinubus-mid-term-governance-data-into-dignity-for-nigerians/" class="title">
-                                Translating Tinubu’s mid-term governance data into dignity for Nigerians<br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book unread">
-                        <div class="cover">
-                            <img src="./assets/images/3.jpg">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://thenationonlineng.net/trump-presidency-and-global-political-economy/#google_vignette">
-                                Trump presidency and global political economy</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book unread">
-                        <div class="cover">
-                            <img src="./assets/images/4.jpg">
-                        </div>
-                        <div class="description">
-                            <a href="https://thenationonlineng.net/trump-why-zelensky-has-no-better-path-to-a-peace-deal/" class="title">
-                                Trump: Why Zelensky has no better path to a peace deal</br>
-                               <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/5.jpg">
-                        </div>
-                        <div class="description">
-                            <a href="https://www.thecable.ng/natasha-akpotis-case-and-barriers-to-women-in-power-politics/" class="title">
-                                Natasha Akpoti’s case and barriers to women in power, politics</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/6.jpg">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://www.thecable.ng/surviving-pervasive-corruption-in-nigeria/">
-                                Surviving pervasive corruption in Nigeria</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/7.jpg">
-                        </div>
-                        <div class="description">
-                            <a href="https://thenationonlineng.net/how-soldiers-involvement-in-civilian-affairs-undermines-civil-military-relations/" class="title">
-                                How soldiers’ involvement in civilian affairs undermines civil-military relations</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/8.jpg">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://www.thecable.ng/something-is-wrong-with-how-faith-speaks-truth-to-power-in-nigeria/">
-                               Something is wrong with how faith speaks truth to power in Nigeria</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/9.png">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://www.thecable.ng/boyfriends-from-hell/">
-                                Boyfriends from hell</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="book read">
-                        <div class="cover">
-                            <img src="./assets/images/9.jpg">
-                        </div>
-                        <div class="description">
-                            <a class="title" href="https://www.thecable.ng/the-missing-weapon-in-nigerias-war-on-terror/">
-                                The missing weapon in Nigeria’s war on terror</br>
-                                <span class="author">Lekan Olayiwola</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
+    <section class="our-team" style="margin-top: 70px;">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="./assets/images/lekan.jpg" alt="Team Member">
+                <h3>Lekan Olayiwola</h3>
+                <p>Founder/Executive Director</p>
+            </div>
+            <div class="team-card">
+                <img src="./assets/images/Chidike.jpg" alt="Team Member">
+                <h3>Chidike Nnamani</h3>
+                <p>Research and Policy Lead</p>
+            </div>
+            <div class="team-card">
+                <img src="./assets/images/oluwadamilola.jpg" alt="Team Member">
+                <h3>Oluwadamilola Olayiwola</h3>
+                <p>Programmes Director</p>
             </div>
         </div>
     </section>
 
-   <footer class="footer" id="footer">
+    <section class="founder-section">
+        <div class="founder-container">
+            <div class="founder-image">
+                <img src="./assets/images/lekan.jpg" alt="Founder Image">
+            </div>
+            <div class="founder-bio">
+                <h2>Meet the Founder</h2>
+                <p>
+                    Lekan Olayiwola <br> <br>
+
+                    Founder/Executive Director | M.A. Peace & Conflict Studies, <br>
+                    B.A. Classics (First Class)  Pax Empathica <br> <br>
+
+                    Reimagining Power with Empathy, Dignity, and Design <br> <br>
+                    Lekan Olayiwola is a Policy Entrepreneur, Peace Ecologist, and Public Value Developer
+                    innovating Global Peace Governance. He is a dynamic peace and governance innovator and strategist
+                    with a rare blend of classical intellectual depth, field-based policy insight, and systemic
+                    innovation. With degrees in Classics and Peace and Conflict Studies, Lekan bridges ancient
+                    wisdom with modern complexity to forge new ethical paradigms for leadership, governance, and 
+                    justice.
+                </p>
+                <!-- <p>
+                    Through his work, Dr. Adebayo continues to inspire a generation of changemakers committed to
+                    transforming institutions through empathy, evidence-based policies, and human-centered frameworks like
+                    the Leadership Integrity Index (PE-LII) and Empathy Distribution & Social Experience Index (EDSEI).
+                </p> -->
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section company-info">

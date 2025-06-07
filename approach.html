@@ -59,19 +59,28 @@
             color: #3498db;
         }
 
-        .logo {
+               .logo {
             display: flex;
             align-items: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2c3e50;
+            gap: 10px;
         }
 
-        .logo::after {
-            content: "Pax Empathica";
-            margin-right: 0.5rem;
-            font-family: sans-serif;
+        .logo-text {
+            display: flex;
+            gap: 5px;
+            font-size: 1.2rem;
         }
+
+        .pax {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: bold;
+        }
+
+        .empathica {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-weight: normal;
+        }
+
 
         .nav-links {
             display: flex;
@@ -203,8 +212,10 @@
         .hero-title {
             font-size: 4rem;
             margin-bottom: 2rem;
-            font-weight: 300;
+            font-weight: bolder;
             line-height: 1.2;
+            color: #fff;
+            
         }
 
         .hero-description {
@@ -212,6 +223,7 @@
             margin-bottom: 2rem;
             opacity: 0.9;
             font-style: italic;
+            color: #fff;
         }
 
         /* Features Grid */
@@ -506,7 +518,7 @@
     }
 
             .footer {
-            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+            background: linear-gradient(135deg, #000309 0%, #12104a 100%);
             color: white;
             padding: 60px 0 30px;
             position: relative;
@@ -919,18 +931,23 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">
-                <img src="./assets/images/logo.png" width="50px" height="50px" alt="" srcset="">
+        <div class="logo">
+            <img src="./assets/images/logo.png" width="50" height="50" alt="Pax Empathica Logo">
+            <div class="logo-text">
+                <span class="pax">Pax</span>
+                <span class="empathica">Empathica</span>
             </div>
+        </div>
+
             <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li class="nav-item">
                     <a href="#about" class="dropdown-toggle">About Us <span class="dropdown-icon">▼</span></a>
                     <div class="dropdown">
-                        <a href="#about">Our Story</a>
-                        <a href="#team">Our Team</a>
-                        <a href="#values">Our Values</a>
-                        <a href="#impact">Our Impact</a>
+                        <a href="./about.html#about">Our Story</a>
+                        <a href="./our-team.html">Our Team</a>
+                        <a href="./about.html#core">Our Values</a>
+                        <a href="./about.html#impact">Our Impact</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -953,6 +970,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="./donate.html" class="dropdown-toggle">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./donate.html" class="dropdown-toggle">Consultancy <span class="dropdown-icon">▼</span></a>
                     <div class="dropdown">
                         <a href="#services">Services</a>
                         <a href="#training">Training Programs</a>
@@ -964,10 +984,9 @@
                     <a href="./publications.html" class="dropdown-toggle">Publications <span class="dropdown-icon">▼</span></a>
                     <div class="dropdown">
                         <a href="./publications.html">Books</a>
-                        <a href="./publications.html">Article</a>
-                        <a href="./publications.html">White Paper</a>
-                        <a href="./publications.html">Policy Brief</a>
                         <a href="./articles.html">Articles / Op Ed's</a>
+                        <a href="./publications.html">White Paper</a>
+                        <a href="./publications.html">Policy Brief</a> 
                     </div>
                 </li>
                 <li class="nav-item">
@@ -1036,16 +1055,16 @@
                     </p>
                 <div class="content-grid">
                     <div>
-                        <h2 class="content-title">1. Interdisciplinary Framework</h2>
+                        <h2 class="content-title">Interdisciplinary Framework</h2>
                         <p class="content-text">
-                           <strong>a. Classics</strong> : Study of historical empires like Rome for governance and power structures. <br>
-                           <strong>b. Peace Studies</strong> : Use of peacebuilding models and conflict transformation. <br>
-                           <strong>c. Sociology, Ethics, Theology</strong> : Integration of moral thought, justice narratives, and cultural ethics.
+                           <strong>. Classics</strong> : Study of historical empires like Rome for governance and power structures. <br>
+                           <strong>. Peace Studies</strong> : Use of peacebuilding models and conflict transformation. <br>
+                           <strong>. Sociology, Ethics, Theology</strong> : Integration of moral thought, justice narratives, and cultural ethics.
                         </p>
                         
                     </div>
                     <div>
-                        <h2 class="content-title">2. Comparative Historical Analysis</h2>
+                        <h2 class="content-title">Comparative Historical Analysis</h2>
                         <p class="content-text">
                            We examine systems like Pax Romana, Pax Britannica, and Pax Americana versus grassroots 
                            postcolonial peace efforts. We ask: What were the costs? Who was silenced? What visions 
@@ -1053,7 +1072,7 @@
                         </p>
                     </div>
                     <div style="margin-top: -60px;">
-                        <h2 class="content-title">3. Decolonial & Intersectional Lenses</h2>
+                        <h2 class="content-title">Decolonial & Intersectional Lenses</h2>
                         <p class="content-text">
                           We uplift Global South, women, Indigenous, and marginalized voices to expose structural 
                           injustice in modern peacebuilding.
@@ -1061,7 +1080,7 @@
                         
                     </div>
                     <div style="margin-top: -60px;">
-                        <h2 class="content-title">4. Narrative Inquiry</h2>
+                        <h2 class="content-title">Narrative Inquiry</h2>
                         <p class="content-text">
                           We treat stories as "data of dignity"—revealing ethical dimensions often missed by 
                           policy or statistics.
@@ -1069,16 +1088,16 @@
                         
                     </div>
                     <div style="margin-top: -60px;">
-                        <h2 class="content-title">5. Qualitative & Reflective Research</h2>
+                        <h2 class="content-title">Qualitative & Reflective Research</h2>
                         <p class="content-text">
-                           <strong>a. </strong> Thematic content analysis <br>
-                           <strong>b. </strong> Critical reflections on peacebuilding failures <br>
-                           <strong>c. </strong> Ethical engagement with affected communities
+                           <strong>. </strong> Thematic content analysis <br>
+                           <strong>. </strong> Critical reflections on peacebuilding failures <br>
+                           <strong>. </strong> Ethical engagement with affected communities
                         </p>
                         
                     </div>
                     <div style="margin-top: -60px;">
-                        <h2 class="content-title">6. Knowledge Translation</h2>
+                        <h2 class="content-title">Knowledge Translation</h2>
                         <p class="content-text">
                          We convert insights into public scholarship: policy briefs, podcasts, visual explainers, 
                          and educational tools.
@@ -1086,7 +1105,7 @@
                         
                     </div>
                     <div style="margin-top: -60px;">
-                        <h2 class="content-title">7. Collaborative Praxis</h2>
+                        <h2 class="content-title">Collaborative Praxis</h2>
                         <p class="content-text">
                             We co-create with scholars, artists, and peacebuilders globally. Pax Empathica is a 
                             collective, evolving vision.
@@ -1263,13 +1282,10 @@
                 <div class="footer-section">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li><a href="#corporate-info">No 1a, Ibikunle close, off Harvey Road, Yaba </a></li>
+                        <li><a href="#corporate-info">1a, Ibikunle close, off Harvey Road, Yaba </a></li>
                         <li><a href="mailto:enquiries@paxempathica.org">enquiries@paxempathica.org</a></li>
-                        <li><a href="mailto:chidikennamani@paxempathica.org ">chidikennamani@paxempathica.org </a></li>
-                        <li><a href="mailto:damilolaolayiwola@paxempathica.org">damilolaolayiwola@paxempathica.org</a></li>
-                        <li><a href="mailto:lekanolayiwola@paxempathica.org ">lekanolayiwola@paxempathica.org </a></li>
                         <li><a href="tel:+2348062062609">+2348062062609</a></li>
-                        <li><a href="tel:+2349058778970">+2349058778970</a></li>
+                        <li><a href="tel:+2348039166985">+2348039166985</a></li>
                     </ul>
                 </div>
             </div>
